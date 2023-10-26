@@ -8,5 +8,10 @@
 <body>
     <h3>Maksim Vlasov</h3>
     <p>Welcome to my site which I create for learnig Django!</p>
+    <ul>
+        {% for x in polls %}
+            <li>{{x.language}} {{x.knowledge}}% {{x.description}}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
