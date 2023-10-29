@@ -11,3 +11,15 @@ def index(request):
         'polls': polls,
     }
     return HttpResponse(template.render(context, request))
+
+def details(request, id):
+    polls = Language.objects.get(id=id)
+    template = loader.get_template('details.html')
+    context = {
+        'polls': polls,
+    }
+    return HttpResponse(template.render(context, request))
+
+def main(request):
+    template = loader.get_template('main.html')
+    return HttpResponse(template.render())
