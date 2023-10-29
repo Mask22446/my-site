@@ -12,8 +12,8 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
-def details(request, id):
-    polls = Language.objects.get(id=id)
+def details(request, slug):
+    polls = Language.objects.get(slug=slug)
     template = loader.get_template('details.html')
     context = {
         'polls': polls,

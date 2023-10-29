@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
 </head>
 <body>
     
-    {% block content %}
-    {% endblock %}
+    <div class="container">
+            <ul class="nav bg-info">
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="/">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="/polls">Languages</a>
+                </li>
+            </ul>
+        <div class="text-center">
+            {% block content %}
+            {% endblock %}
+        </div>      
 
+    </div>
 </body>
 </html>
