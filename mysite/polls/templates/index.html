@@ -8,7 +8,7 @@
         <h3>Maksim Vlasov</h3>
         <ul>
             {% for x in polls %}
-                <li style="list-style-type: none;" onclick="window.location='/details/{{ x.slug }}'">{{x.language}} {{x.knowledge}}%</li>
+                <li style="list-style-type: none;" onclick="window.location='details/{{ x.slug }}'">{{x.language}} {{x.knowledge}}%</li>
             {% endfor %}
         </ul>
     </div>
