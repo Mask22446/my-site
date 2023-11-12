@@ -1,22 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
-    {% load bootstrap5 %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'first.css' %}">
 </head>
 <body>
     
-    <div class="container">
-            <ul class="nav bg-info">
-                <li class="nav-item">
-                  <a class="nav-link link-light" href="/">HOME</a>
+    <div class="topnav">
+            <ul>
+                <li>
+                  <a href="/">HOME</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link link-light" href="/polls">Languages</a>
+                <li>
+                  <a href="/polls">Languages</a>
                 </li>
             </ul>
         <div class="text-center">
